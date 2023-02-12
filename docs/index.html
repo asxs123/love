@@ -65,9 +65,9 @@
 		<script>
 			var h = document.getElementById(h2);//调取html中的输出对象
 			//计时器方法一
-			timeDifference(`2022/10/26 23:00:00`, ``, h2);//此处先调用一次防止出现刷页面后没有内容
+			timeDifference(`2022/11/25 19:25:00`, ``, h2);//此处先调用一次防止出现刷页面后没有内容
 			function a() {
-				timeDifference(`2022/10/26 23:00:00`, ``, h2);
+				timeDifference(`2022/11/25 19:25:00`, ``, h2);
 			}//设置好时间差函数的调用参数,封装函数便于定时器调用
 			setInterval(a, 1000);//定时器设置每1000毫秒即1s执行一次a函数
  
@@ -77,7 +77,7 @@
 			//@param  endT为目标时间,需按照字符串格式输入;endName为目标时间的名字,默认为`目标时间`;obj为在网页内的输出对象.
 			//@return  true表示为目标时间为过去,false表示目标时间为未来
  
-			function timeDifference(endT, endName = `2022/10/28`, obj) {
+			function timeDifference(endT, endName = `2022/11/25`, obj) {
 				var startTime = new Date().getTime();//引入当前时间戳
 				var endTime = new Date(endT).getTime();//引入结束目标时间戳
 				var secondDif = parseInt((endTime - startTime) / 1000);//计算真实时间差,单位s/秒
