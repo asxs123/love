@@ -82,66 +82,32 @@
 			function timeDifference(endT, endT2, endName = `2022/11/25`, endName2 = `2023/01/23`, obj) {
 				var startTime = new Date().getTime();//引入当前时间戳
 				var endTime = new Date(endT).getTime();//引入结束目标时间戳
-				var endTime2 = new Date(endT2).getTime();//引入结束目标时间戳
+				var endTime2 = new Date(endT2).getTime();//引入结束目标2时间戳
+
 				var secondDif = parseInt((endTime - startTime) / 1000);//计算真实时间差,单位s/秒
 				var secondDif2 = parseInt((endTime2 - startTime) / 1000);//计算真实时间差,单位s/秒
-				if (secondDif < 0) {
-					var secondDifference = -secondDif;
-				} else {
-					var secondDifference = secondDif;
-				}//定义时间差为正
-				if (secondDif2 < 0) {
-					var secondDifference2 = -secondDif2;
-				} else {
-					var secondDifference2 = secondDif2;
-				}//定义时间差为正
+				var secondDifference = -secondDif;//定义时间差为正
+				var secondDifference2 = -secondDif2;//定义时间差为正
+
 				var day = parseInt(secondDifference / 24 / 60 / 60);//计算出天数取整
 				var hour = parseInt(secondDifference / 60 / 60) % 24;//计算出总小时数去掉达到一天24h的部分
 				var minute = parseInt(secondDifference / 60) % 60;//计算出总分钟数去掉达到一小时60分钟的部分
 				var second = secondDifference % 60;//总秒数去掉达到一分钟60秒的部分
+
 				var day2 = parseInt(secondDifference2 / 24 / 60 / 60);//计算出天数取整
 				var hour2 = parseInt(secondDifference2 / 60 / 60) % 24;//计算出总小时数去掉达到一天24h的部分
 				var minute2 = parseInt(secondDifference2 / 60) % 60;//计算出总分钟数去掉达到一小时60分钟的部分
 				var second2 = secondDifference2 % 60;//总秒数去掉达到一分钟60秒的部分
-				if (secondDif < 0) {
-					obj.innerHTML = `ZJL&&WMH<br>我们认识已经${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span><br><br><br>我们相爱💕已经${endName2}<br><span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
-					return false;
-				} else {
-					obj.innerHTML = `${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
-					return true;
-				}//根据真实时间差选择输出语句.
-				if (secondDif2 < 0) {
-					obj.innerHTML = `<br><br><br>我们相爱💕已经${endName2}<br><span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
-					return false;
-				} else {
-					obj.innerHTML = `${endName2}<br><span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
-					return true;
-				}//根据真实时间差选择输出语句.
+
+				obj.innerHTML = `ZJL&&WMH<br>
+								我们认识已经${endName}<br>
+								<span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span><br>
+								<br>我们相爱💕已经${endName2}<br>
+								<span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
+				return false;
  
 			}
 
-			// function timeDifference2(endT, endName = `2023/01/23`, obj) {
-			// 	var startTime = new Date().getTime();//引入当前时间戳
-			// 	var endTime = new Date(endT).getTime();//引入结束目标时间戳
-			// 	var secondDif = parseInt((endTime - startTime) / 1000);//计算真实时间差,单位s/秒
-			// 	if (secondDif < 0) {
-			// 		var secondDifference = -secondDif;
-			// 	} else {
-			// 		var secondDifference = secondDif;
-			// 	}//定义时间差为正
-			// 	var day = parseInt(secondDifference / 24 / 60 / 60);//计算出天数取整
-			// 	var hour = parseInt(secondDifference / 60 / 60) % 24;//计算出总小时数去掉达到一天24h的部分
-			// 	var minute = parseInt(secondDifference / 60) % 60;//计算出总分钟数去掉达到一小时60分钟的部分
-			// 	var second = secondDifference % 60;//总秒数去掉达到一分钟60秒的部分
-			// 	if (secondDif < 0) {
-			// 		obj.innerHTML = `<br><br><br>我们相爱已经${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
-			// 		return false;
-			// 	} else {
-			// 		obj.innerHTML = `${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
-			// 		return true;
-			// 	}//根据真实时间差选择输出语句.
- 
-			// }
 		</script>
 	</body>
 </html>
