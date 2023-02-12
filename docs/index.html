@@ -65,10 +65,10 @@
 		<script>
 			var h = document.getElementById(h2);//调取html中的输出对象
 			//计时器方法一
-			timeDifference(`2022/11/25 19:25:00`, `2023/01/23 15:40:00`, ``, h2);//此处先调用一次防止出现刷页面后没有内容
+			timeDifference(`2022/11/25 19:25:00`, `2023/01/23 15:40:00`, ``, ``, h2);//此处先调用一次防止出现刷页面后没有内容
 			// timeDifference2(`2023/01/23 15:40:00`, ``, h2);//此处先调用一次防止出现刷页面后没有内容
 			function a() {
-				timeDifference(`2022/11/25 19:25:00`, `2023/01/23 15:40:00`, ``, h2);
+				timeDifference(`2022/11/25 19:25:00`, `2023/01/23 15:40:00`, ``, ``, h2);
 				// timeDifference2(`2023/01/23 15:40:00`, ``, h2);
 			}//设置好时间差函数的调用参数,封装函数便于定时器调用
 			setInterval(a, 1000);//定时器设置每1000毫秒即1s执行一次a函数
@@ -79,7 +79,7 @@
 			//@param  endT为目标时间,需按照字符串格式输入;endName为目标时间的名字,默认为`目标时间`;obj为在网页内的输出对象.
 			//@return  true表示为目标时间为过去,false表示目标时间为未来
  
-			function timeDifference(endT, endT2, endName = `2022/11/25`, obj) {
+			function timeDifference(endT, endT2, endName = `2022/11/25`, endName2 = `2023/01/23`, obj) {
 				var startTime = new Date().getTime();//引入当前时间戳
 				var endTime = new Date(endT).getTime();//引入结束目标时间戳
 				var endTime2 = new Date(endT2).getTime();//引入结束目标时间戳
@@ -91,9 +91,9 @@
 					var secondDifference = secondDif;
 				}//定义时间差为正
 				if (secondDif2 < 0) {
-					var secondDifference = -secondDif2;
+					var secondDifference2 = -secondDif2;
 				} else {
-					var secondDifference = secondDif2;
+					var secondDifference2 = secondDif2;
 				}//定义时间差为正
 				var day = parseInt(secondDifference / 24 / 60 / 60);//计算出天数取整
 				var hour = parseInt(secondDifference / 60 / 60) % 24;//计算出总小时数去掉达到一天24h的部分
@@ -111,10 +111,10 @@
 					return true;
 				}//根据真实时间差选择输出语句.
 				if (secondDif2 < 0) {
-					obj.innerHTML = `<br><br><br>我们相爱💕已经${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
+					obj.innerHTML = `<br><br><br>我们相爱💕已经${endName2}<br><span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
 					return false;
 				} else {
-					obj.innerHTML = `${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
+					obj.innerHTML = `${endName2}<br><span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
 					return true;
 				}//根据真实时间差选择输出语句.
  
