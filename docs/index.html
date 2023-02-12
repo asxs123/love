@@ -69,14 +69,42 @@
 				right: -10px;
 				bottom: 0;
 				transform: rotate(-25deg);
-				animation: xhjPigRun1 2s infinite;
+				animation: WMHPigRun1 2s infinite;
 			}
 
 			.WMHIsPig .pig2 {
 				left: -30px;
 				bottom: 0;
 				transform: scaleX(-1) rotate(-90deg);
-				animation: xhjPigRun2 5s infinite;
+				animation: WMHPigRun2 5s infinite;
+			}
+
+			@keyframes WMHPigRun1 {
+				0% {
+					transform: scale(1) rotate(-25deg);
+				}
+
+				50% {
+					transform: scale(1.2) rotate(-25deg);
+				}
+
+				100% {
+					transform: scale(1) rotate(-25deg);
+				}
+			}
+
+			@keyframes WMHPigRun2 {
+				0% {
+					bottom: 0;
+				}
+
+				50% {
+					bottom: 20%;
+				}
+
+				100% {
+					bottom: 0;
+				}
 			}
 		</style>
 	</head>
