@@ -57,9 +57,35 @@
 				font-weight: 520;
 				color: #ff0095;
 			}
+			/* 两只WMH一样的猪 */
+			.WMHIsPig .pig1,
+			.pig2 {
+				position: fixed;
+				z-index: 99;
+				width: 150px;
+			}
+
+			.WMHIsPig .pig1 {
+				right: -10px;
+				bottom: 0;
+				transform: rotate(-25deg);
+				animation: xhjPigRun1 2s infinite;
+			}
+
+			.WMHIsPig .pig2 {
+				left: -30px;
+				bottom: 0;
+				transform: scaleX(-1) rotate(-90deg);
+				animation: xhjPigRun2 5s infinite;
+			}
 		</style>
 	</head>
 	<body>
+		<!-- 两只WMH一样的猪 -->
+		<div class="WMHIsPig">
+			<img src="./images/pig1.gif" alt="pig1" class="pig1">
+			<img src="./images/pig2.gif" alt="pig2" class="pig2">
+		</div>
 		<div class="box"></div>
 		<p id="h2"></p>
 		<script>
