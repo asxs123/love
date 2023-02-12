@@ -104,7 +104,7 @@
 				var minute2 = parseInt(secondDifference2 / 60) % 60;//计算出总分钟数去掉达到一小时60分钟的部分
 				var second2 = secondDifference2 % 60;//总秒数去掉达到一分钟60秒的部分
 				if (secondDif < 0) {
-					obj.innerHTML = `ZJL&&WMH<br>我们认识已经${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
+					obj.innerHTML = `ZJL&&WMH<br>我们认识已经${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span><br><br><br>我们相爱💕已经${endName2}<br><span>${day2 < 10 ? '0' + day2 : day2} 天 ${hour2 < 10 ? '0' + hour2 : hour2} 小时 ${minute2 < 10 ? '0' + minute2 : minute2} 分钟 ${second2 < 10 ? '0' + second2 : second2} 秒</span>`
 					return false;
 				} else {
 					obj.innerHTML = `${endName}<br><span>${day < 10 ? '0' + day : day} 天 ${hour < 10 ? '0' + hour : hour} 小时 ${minute < 10 ? '0' + minute : minute} 分钟 ${second < 10 ? '0' + second : second} 秒</span>`
