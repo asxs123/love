@@ -41,8 +41,7 @@
 				top: -68px;
 			}
 			/* 两只WMH一样的猪 */
-			.WMHIsPig .pig1,
-			.pig2 {
+			.WMHIsPig .pig1{
 				position: fixed;
 				z-index: 99;
 				width: 150px;
@@ -50,16 +49,9 @@
 
 			.WMHIsPig .pig1 {
 				right: -10px;
-				bottom: 0;
+				bottom: 10px;
 				transform: rotate(-25deg);
 				animation: WMHPigRun1 2s infinite;
-			}
-
-			.WMHIsPig .pig2 {
-				left: -30px;
-				bottom: 0;
-				transform: scaleX(-1) rotate(-90deg);
-				animation: WMHPigRun2 5s infinite;
 			}
 			/* 动画绘制 */
 			@keyframes WMHPigRun1 {
@@ -73,20 +65,6 @@
 
 				100% {
 					transform: scale(1) rotate(-25deg);
-				}
-			}
-
-			@keyframes WMHPigRun2 {
-				0% {
-					bottom: 0;
-				}
-
-				50% {
-					bottom: 10%;
-				}
-
-				100% {
-					bottom: 0;
 				}
 			}
 			
@@ -114,7 +92,6 @@
 		<!-- 两只WMH一样的猪 -->
 		<div class="WMHIsPig">
 			<img src="./images/pig1.gif" alt="pig1" class="pig1">
-			<img src="./images/pig2.gif" alt="pig2" class="pig2">
 		</div>
 		<div class="box"></div>
 		<p id="h2"></p>
@@ -182,7 +159,7 @@
 			order="random"
 			preload="auto"
 			list-folded="ture"
-			list-max-height="500px">
+			list-max-height="15%">
 		</meting-js>
 	</body>
 </html>
