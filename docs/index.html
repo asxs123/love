@@ -145,7 +145,8 @@
 
 		<!-- require APlayer -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+		<script src="./js/APlayer.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script> -->
 		<!-- require MetingJS -->
 		<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
@@ -159,7 +160,10 @@
 			order="random"
 			preload="auto"
 			list-folded="ture"
-			list-max-height="500px">
+			list-max-height="500px"
+			lrcFontSize="18"
+			defaultLrcErrText="暂时没有歌词"
+    		defaultLrcLoadingText="歌词加载中">
 		</meting-js>
 	</body>
 </html>
