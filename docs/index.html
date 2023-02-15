@@ -91,7 +91,7 @@
 	<body>
 		<!-- 两只WMH一样的猪 -->
 		<div class="WMHIsPig">
-			<img src="./images/pig1.gif" alt="pig1" class="pig1">
+			<img src="./images/pig1.gif" alt="pig1" class="pig1" id="pig1">
 		</div>
 		<div class="box"></div>
 		<p id="h2"></p>
@@ -140,6 +140,10 @@
 				return false;
  
 			}
+
+			$("#pig1").click(function(){
+   				alert("段落被点击了。");
+  			});
 
 		</script>
 
