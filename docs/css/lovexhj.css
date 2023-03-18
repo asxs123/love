@@ -1,29 +1,25 @@
+/* 将所有元素的外边距和内边距都设为0 */
 * {
     margin: 0;
     padding: 0;
 }
 
 .title img {
+    /* 让图片显示为块级元素 */
     display: block;
+    /* 给图片添加模糊效果，模糊半径为1像素。 */
     filter: blur(1px);
+    /* 设置图片的宽度和高度为100%，即填充整个父元素。 */
     width: 100%;
     height: 100%;
+    /* 调整图片的尺寸和比例以适应容器。 */
     object-fit: fill;
+    /* 固定图片的位置在屏幕左上角。 */
     position: fixed;
     top: 0;
     left: 0;
+    /* 设置图片的堆叠顺序为最低层。 */
     z-index: -1;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-a:hover {
-    color: rgb(0, 130, 255);
-    text-shadow: 0 0 5px white;
 }
 
 .swiper-container {
@@ -63,21 +59,33 @@ a:hover {
 
 /* 标题板块 */
 .title {
+    /* 设置标题的高度为800像素 */
     height: 800px;
+    /* 隐藏超出边界的内容 */
     overflow: hidden;
 }
 
 .title p {
+    /* 段落显示为行内块级元素，即既保留块级元素的特性，又可以和其他行内元素排列在一行。 */
     display: inline-block;
+    /* 设置段落的上外边距为300像素，即让段落与上方的元素有300像素的距离。 */
     margin-top: 300px;
+    /* 设置段落的高度为自动，宽度为100%，即让段落根据内容自适应高度，并填充父元素的宽度。 */
     height: auto;
     width: 100%;
+    /* 设置段落的背景颜色为黑色，不过有20%的透明度，即让段落有一层半透明的黑色遮罩。 */
     background-color: rgba(0, 0, 0, 0.2);
+    /* 设置段落的内边距为20像素上下，0像素左右，即让段落与边框之间有20像素的空隙。 */
     padding: 20px 0;
+    /* 设置段落的文字颜色为白色。 */
     color: white;
+    /* 设置段落的文字大小为50像素。 */
     font-size: 50px;
+    /* 设置段落的文字粗细为粗体。 */
     font-weight: bold;
+    /* 给段落添加文字阴影效果，阴影偏移量为水平和垂直都是0像素，模糊半径为10像素，颜色为黑色。 */
     text-shadow: 0 0 10px black;
+    /* 设置段落的文字对齐方式为居中。 */
     text-align: center;
 }
 
@@ -86,11 +94,11 @@ a:hover {
     background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg1.jpg);
 }
 
-.swiper-container-lovexhj1 {
+.swiper-container-lovewmh1 {
     width: 550px;
 }
 
-.page1-lovexhj1 img {
+.page1-lovewmh1 img {
     width: 100px;
     border-radius: 50%;
     margin-bottom: 20px;
@@ -106,17 +114,12 @@ a:hover {
     width: 150px;
 }
 
-.catText {
-    font-size: 13px;
-    color: gray;
-}
-
 /* 分页2 - 时间轴 */
 .page2 {
     background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg2.jpg);
 }
 
-.swiper-container-lovexhj2 
+.swiper-container-lovewmh2 
 .swiper-wrapper 
 .swiper-slide {
     width: 400px;
@@ -161,129 +164,8 @@ a:hover {
     font-size: 20px;
 }
 
-/* 分页4 - 结尾 */
-.page4 {
-    background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg4.jpg);
-}
-
-.page4-box {
-    width: 1100px;
-    height: 500px;
-    margin: 0 auto;
-    /* background-color: red; */
-}
-
-.page4-img {
-    float: left;
-    width: 400px;
-    overflow: hidden;
-    /* background-color: blue; */
-}
-
-.swiper-container-lovexhj3 {
-    margin-top: 60px;
-    height: 500px;
-}
-
-.swiper-container-lovexhj3 
-.swiper-wrapper 
-.swiper-slide {
-    width: 100%;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.swiper-container-lovexhj3 
-.swiper-wrapper 
-.swiper-slide 
-img {
-    height: 90%;
-    border-radius: 20px;
-}
-
-.page4-text {
-    float: left;
-    width: 450px;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 50px;
-    color: white;
-    text-shadow: 0 0 10px black;
-    margin: 270px 0 0 100px;
-}
-
-.page4-text h1 {
-    margin-bottom: 20px;
-}
-
-/* 底部版权 */
-.footer {
-    width: 100%;
-    height: 260px;
-    position: relative;
-}
-
-.footerBox {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    color: white;
-    text-shadow: 0 0 5px black;
-}
-
-/* 两只XHJ一样的猪 */
-.xhjIsPig .pig1,
-.pig2 {
-    position: fixed;
-    z-index: 99;
-    width: 150px;
-}
-
-.xhjIsPig .pig1 {
-    right: -10px;
-    bottom: 0;
-    transform: rotate(-25deg);
-    animation: xhjPigRun1 2s infinite;
-}
-
-.xhjIsPig .pig2 {
-    left: -30px;
-    bottom: 0;
-    transform: scaleX(-1) rotate(-90deg);
-    animation: xhjPigRun2 5s infinite;
-}
-
-@keyframes xhjPigRun1 {
-    0% {
-        transform: scale(1) rotate(-25deg);
-    }
-
-    50% {
-        transform: scale(1.2) rotate(-25deg);
-    }
-
-    100% {
-        transform: scale(1) rotate(-25deg);
-    }
-}
-
-@keyframes xhjPigRun2 {
-    0% {
-        bottom: 0;
-    }
-
-    50% {
-        bottom: 20%;
-    }
-
-    100% {
-        bottom: 0;
-    }
-}
-
 /* 自适应 */
+/* 当视口宽度小于或等于1060像素时 */
 @media screen and (max-width: 1060px) {
     .page3 {
         padding-top: 80px;
@@ -293,28 +175,12 @@ img {
         width: 500px;
         padding: 50px 50px;
     }
-
-    .page4-box {
-        width: 700px;
-    }
-
-    .page4-img {
-        width: 240px;
-    }
-
-    .page4-text {
-        width: 330px;
-        margin: 270px 0 0 30px;
-    }
-
-    .page4-text h1 {
-        margin-bottom: 20px;
-        font-size: 25px;
-    }
 }
 
+/* 当视口宽度小于或等于730像素时 */
 @media screen and (max-width: 730px) {
     .title p {
+        /* 设置段落的文字大小为30像素。 */
         font-size: 30px;
     }
 
@@ -322,22 +188,9 @@ img {
         padding-top: 150px;
     }
 
-    .swiper-container-lovexhj1 {
+    .swiper-container-lovewmh1 {
         width: 400px;
         height: 500px;
-    }
-
-    .page2-box {
-        width: 240px;
-        padding-top: 80px;
-    }
-
-    .swiper-container-lovexhj2 {
-        height: 450px;
-    }
-
-    .page2-box p {
-        font-size: 16px;
     }
 
     .page3 {
@@ -358,54 +211,14 @@ img {
         font-size: 15px;
     }
 
-    .page4 {
-        height: 1100px;
-    }
-
-    .page4-box {
-        width: 400px;
-    }
-
-    .page4-img {
-        width: 100%;
-    }
-
-    .swiper-container-lovexhj3 
-    .swiper-wrapper 
-    .swiper-slide 
-        img {
-        height: 100%;
-        border-radius: 20px;
-    }
-
-    .page4-text {
-        width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .page4-text h1 {
-        margin-bottom: 20px;
-        font-size: 25px;
-    }
-
-    .footer {
-        height: 560px;
-    }
-
-    .xhjIsPig .pig1,
-    .pig2 {
-        width: 130px;
-    }
-
-    .xhjIsPig .pig2 {
-        left: -25px;
-    }
 }
 
+/* 当视口宽度小于或等于426像素时 */
 @media screen and (max-width: 426px) {
     .title p {
+        /* 设置段落的文字大小为30像素。 */
         font-size: 30px;
+        /* 设置段落的上外边距为 260 像素 */
         margin-top: 260px;
     }
 
@@ -413,35 +226,21 @@ img {
         padding-top: 150px;
     }
 
-    .swiper-container-lovexhj1 {
+    .swiper-container-lovewmh1 {
         width: 90%;
         height: 500px;
     }
 
-    .page1-lovexhj1 {
+    .page1-lovewmh1 {
         font-size: 15px;
     }
 
-    .page1-lovexhj1 img {
+    .page1-lovewmh1 img {
         width: 70px;
     }
 
     .page1 .cat {
         width: 120px;
-    }
-
-    .page2-box {
-        width: 240px;
-        padding-top: 80px;
-    }
-
-    .swiper-container-lovexhj2 {
-        width: 80%;
-        height: 500px;
-    }
-
-    .page2-box p {
-        font-size: 16px;
     }
 
     .page3 {
@@ -460,49 +259,5 @@ img {
     
     #talkToWMH p {
         font-size: 15px;
-    }
-
-    .page4 {
-        height: 1100px;
-    }
-
-    .page4-box {
-        width: 90%;
-    }
-
-    .page4-img {
-        width: 100%;
-    }
-
-    .swiper-container-lovexhj3 
-    .swiper-wrapper 
-    .swiper-slide 
-        img {
-        height: 100%;
-        border-radius: 20px;
-    }
-
-    .page4-text {
-        width: 85%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .page4-text h1 {
-        margin-bottom: 20px;
-        font-size: 25px;
-    }
-
-    .footer {
-        height: 560px;
-    }
-
-    .xhjIsPig .pig1,
-    .pig2 {
-        width: 80px;
-    }
-
-    .xhjIsPig .pig2 {
-        left: -15px;
     }
 }
