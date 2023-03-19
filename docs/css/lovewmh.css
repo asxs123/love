@@ -91,7 +91,7 @@
 
 /* 分页1 - 骚话 */
 .page1 {
-    background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg1\(1\).jpg);
+    background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg1.webp);
 }
 
 .swiper-container-lovewmh1 {
@@ -141,7 +141,7 @@
 
 /* 分页3 - 一段话 */
 .page3 {
-    background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg3\(1\).jpg);
+    background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg3.webp);
     padding-top: 200px;
     height: 700px;
 }
