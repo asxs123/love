@@ -115,7 +115,7 @@
 }
 
 /* 分页2 - 时间轴 */
-/* .page2 {
+.page2 {
     background-image: linear-gradient(to right, rgba(0, 162, 255, 0.4), rgba(255, 0, 255, 0.2)), url(../images/bg2.jpg);
 }
 
@@ -137,7 +137,7 @@
     border-radius: 20px;
     margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} */
+}
 
 /* 分页3 - 一段话 */
 .page3 {
@@ -193,6 +193,19 @@
         height: 500px;
     }
 
+    .page2-box {
+        width: 240px;
+        padding-top: 80px;
+    }
+
+    .swiper-container-lovewmh2 {
+        height: 450px;
+    }
+
+    .page2-box p {
+        font-size: 16px;
+    }
+
     .page3 {
         padding-top: 100px;
         height: 800px;
@@ -241,6 +254,20 @@
 
     .page1 .cat {
         width: 120px;
+    }
+
+    .page2-box {
+        width: 240px;
+        padding-top: 80px;
+    }
+
+    .swiper-container-lovewmh2 {
+        width: 80%;
+        height: 500px;
+    }
+
+    .page2-box p {
+        font-size: 16px;
     }
 
     .page3 {
