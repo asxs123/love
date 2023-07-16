@@ -18,3 +18,11 @@ var swiper = new Swiper('.swiper-container-lovewmh2', {
         slideShadows: true  //是否启用slide阴影
     }
 });
+
+var swiper = new Swiper('.swiper-container-lovewmh3', {
+    pagination: '.swiper-pagination-lovewmh3',
+    effect: 'flip',
+    grabCursor: true,
+    nextButton: '.swiper-button-next-lovewmh3',
+    prevButton: '.swiper-button-prev-lovewmh3'
+});
